@@ -1,67 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sonca Vo - About Me</title>
-    <style>
-        /* Your original styles here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #004080;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #e6e6e6;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #004080;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        nav a.active {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        main {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #004080;
-        }
-        footer {
-            background-color: #004080;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sonca Vo - About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 0 70px; /* bottom padding so fixed footer doesn't overlap content */
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header { background:#004080; color:#fff; padding:20px; text-align:center; }
+    nav { background:#e6e6e6; padding:10px; text-align:center; }
+    nav a { color:#004080; margin:0 12px; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    nav a.active { font-weight:700; text-decoration:underline; }
+    main { padding:20px; max-width:900px; margin:20px auto; }
+    h2 { color:#004080; }
+    footer {
+      background:#004080; color:#fff; text-align:center;
+      padding:10px; position:fixed; width:100%; bottom:0; left:0;
+    }
+
+    /* profile photo */
+    .profile-photo {
+      width:150px;
+      height:150px;
+      object-fit:cover;
+      border-radius:50%;
+      float:left;
+      margin-right:20px;
+    }
+
+    /* small-screen adjustments */
+    @media (max-width:520px) {
+      .profile-photo { float:none; display:block; margin: 0 auto 20px; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Sonca Vo</h1>
-        <p>Applied Linguist | Educator | Researcher</p>
-    </header>
+  <header>
+    <h1>Sonca Vo</h1>
+    <p>Applied Linguist | Educator | Researcher</p>
+  </header>
 
-    <nav>
+  <nav>
     <a href="index.html" class="active">About</a>
     <a href="research.html">Research</a>
     <a href="publications.html">Publications</a>
@@ -69,20 +54,24 @@
     <a href="service.html">Service</a>
     <a href="grants.html">Grants/Awards</a>
     <a href="contact.html">Contact</a>
-</nav>
+  </nav>
 
+  <main>
+    <section>
+      <h2>About Me</h2>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <img src="myphoto.jpg" alt="Photo of Sonca Vo" style="width:150px; border-radius: 50%; float: left; margin-right: 20px;">
-            <p>Welcome! I am a multilingual scholar and applied linguist specializing in language assessment, multilingual education, and teacher professional development. My work spans both U.S. and international contexts, with a strong commitment to equity and inclusion in education.</p>
-        </section>
+      <!-- Make sure your image is at "images/myphoto.jpg" OR update the src accordingly -->
+      <img src="images/myphoto.jpg"
+           alt="Photo of Sonca Vo"
+           class="profile-photo"
+           onerror="this.style.display='none'">
 
-    </main>
+      <p>Welcome! I am a multilingual scholar and applied linguist specializing in language assessment, multilingual education, and teacher professional development. My work spans both U.S. and international contexts, with a strong commitment to equity and inclusion in education.</p>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Sonca Vo</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Sonca Vo</p>
+  </footer>
 </body>
 </html>
