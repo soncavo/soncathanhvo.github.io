@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Sonca Vo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+    }
+    nav {
+      background-color: #004080;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #0066cc;
+    }
+    nav a.active {
+      background-color: #00264d;
+    }
+    main {
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 120px;
+    }
+    button {
+      width: 120px;
+      padding: 10px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0066cc;
+    }
+    .contact-info {
+      margin-top: 40px;
+      font-size: 0.95em;
+      color: #444;
+    }
+    .contact-info strong {
+      color: #004080;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      color: #888;
+      font-size: 0.9em;
+      border-top: 1px solid #ccc;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">About Me</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="research.html">Research</a>
+    <a href="service.html">Service</a>
+    <a href="grant.html">Grant</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <main>
+    <h1>Contact Me</h1>
+    <form action="mailto:vosonca@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="Email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="Message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> vosonca@gmail.com</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Sonca Vo
+  </footer>
+</body>
+</html>
+
