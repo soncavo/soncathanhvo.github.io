@@ -35,20 +35,28 @@
     }
     .profile-container {
       display: flex;
-      align-items: center;  /* change from flex-start to center */
+      align-items: center;
       gap: 30px;
       max-width: 900px;
       margin: auto;
     }
     .profile-photo img {
-      width: 280px; /* bigger size */
+      width: 280px;
       height: auto;
-      border-radius: 12px; /* rounded corners */
+      border-radius: 12px;
       display: block;
       margin-bottom: 10px;
     }
+    .profile-info {
+      font-size: 0.95em;
+      line-height: 1.4em;
+      color: #333;
+      margin-bottom: 15px;
+      max-width: 280px;
+    }
     .google-scholar-link {
       text-align: center;
+      margin-top: 10px;
     }
     .google-scholar-link a {
       color: #004080;
@@ -60,7 +68,7 @@
       text-decoration: underline;
     }
     .profile-description {
-      flex: 1; /* take remaining space */
+      flex: 1;
     }
     footer {
       text-align: center;
@@ -86,9 +94,17 @@
     <div class="profile-container">
       <div class="profile-photo">
         <img src="images/soncavo3.jpg" alt="Photo of Son Ca" />
+        <div class="profile-info">
+          <p><strong>Sonca Vo</strong><br />
+          Postdoctoral Scholar at Department of Linguistics &amp; Department of World Languages and Cultures<br />
+          The University of Utah, Salt Lake City, UT, USA<br />
+          Email: <a href="mailto:sonca.vo@utah.edu">sonca.vo@utah.edu</a><br />
+          Office: LNCO 2930
+          </p>
+        </div>
         <div class="google-scholar-link">
           <a href="https://scholar.google.com/citations?user=DXbfUR0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-            Google Scholar
+            View my Google Scholar profile
           </a>
         </div>
       </div>
