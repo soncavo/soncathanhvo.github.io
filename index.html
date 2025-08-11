@@ -33,24 +33,21 @@
       max-width: 900px;
       margin: auto;
     }
-   .profile-container {
-  display: flex;
-  align-items: center;  /* change from flex-start to center */
-  gap: 30px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.profile-photo img {
-  width: 280px; /* bigger size */
-  height: auto;
-  border-radius: 12px; /* rounded corners */
-}
-
-.profile-description {
-  flex: 1; /* take remaining space */
-}
-
+    .profile-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .profile-photo img {
+      width: 280px;
+      height: auto;
+      border-radius: 12px;
+    }
+    .profile-description {
+      flex: 1;
+    }
     footer {
       text-align: center;
       padding: 10px;
@@ -58,6 +55,17 @@
       font-size: 0.9em;
       border-top: 1px solid #ccc;
       margin-top: 40px;
+    }
+    /* Style for the search input */
+    #search-input {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: block;
+      margin: 0 auto 20px auto;
     }
   </style>
 </head>
@@ -71,35 +79,60 @@
   </nav>
 
   <main>
-  <div class="profile-container">
-    <div class="profile-photo">
-      <img src="images/soncavo3.jpg" alt="Photo of Son Ca" />
+    <!-- Search box -->
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Search content on this page..."
+      onkeyup="filterContent()"
+    />
+
+    <div class="profile-container">
+      <div class="profile-photo">
+        <img src="images/soncavo3.jpg" alt="Photo of Son Ca" />
+      </div>
+      <div class="profile-description">
+        <p>
+          I am an applied linguist with a Ph.D. in Applied Linguistics and Technology from Iowa State University. My research focuses on language assessment, multilingualism, and the role of intellectual humility in education. I am also passionate about integrating linguistic theory with real-world assessment practices to promote fairness and validity. In addition to my research, I have extensive experience teaching applied linguistics courses, and I enjoy mentoring students and collaborating with colleagues across disciplines.
+        </p>
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>Ph.D. in Applied Linguistics and Technology (with Distinction)</strong><br />
+            Iowa State University, Ames, IA, USA <em>2019</em>
+          </li>
+          <li>
+            <strong>M.A. in Teaching English as a Second Language (with Distinction)</strong><br />
+            Northern Arizona University, Flagstaff, AZ, USA <em>2011</em>
+          </li>
+          <li>
+            <strong>B.A. in English (with Distinction)</strong><br />
+            University of Foreign Language Studies – The University of Danang, Danang, Vietnam <em>2004</em>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="profile-description">
-      <p>
-        I am an applied linguist with a Ph.D. in Applied Linguistics and Technology from Iowa State University. My research focuses on language assessment, multilingualism, and the role of intellectual humility in education. I am also passionate about integrating linguistic theory with real-world assessment practices to promote fairness and validity. In addition to my research, I have extensive experience teaching applied linguistics courses, and I enjoy mentoring students and collaborating with colleagues across disciplines.
-      </p>
-      <h2>Education</h2>
-<ul>
-  <li>
-    <strong>Ph.D. in Applied Linguistics and Technology (with Distinction)</strong><br>
-    Iowa State University, Ames, IA, USA <em>2019</em>
-  </li>
-  <li>
-    <strong>M.A. in Teaching English as a Second Language (with Distinction)</strong><br>
-    Northern Arizona University, Flagstaff, AZ, USA <em>2011</em>
-  </li>
-  <li>
-    <strong>B.A. in English (with Distinction)</strong><br>
-    University of Foreign Language Studies – The University of Danang, Danang, Vietnam <em>2004</em>
-  </li>
-</ul>
-    </div>
-  </div>
-</main>
+  </main>
 
   <footer>
     &copy; 2025 Sonca Vo
   </footer>
+
+  <script>
+    function filterContent() {
+      const input = document.getElementById('search-input');
+      const filter = input.value.toLowerCase();
+      const main = document.querySelector('main');
+      const elements = main.querySelectorAll('p, li, h2');
+
+      elements.forEach(el => {
+        if (el.textContent.toLowerCase().includes(filter)) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
