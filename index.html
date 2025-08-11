@@ -34,12 +34,12 @@
       margin: auto;
     }
     .profile-container {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
+  display: flex;
+  align-items: flex-start;  /* changed from center to flex-start */
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
     .profile-photo img {
       width: 280px;
       height: auto;
@@ -68,8 +68,9 @@
       text-decoration: underline;
     }
     .profile-description {
-      flex: 1;
-    }
+  flex: 1;
+  margin-top: 30px; 
+}
     footer {
       text-align: center;
       padding: 10px;
@@ -104,7 +105,7 @@
         </div>
         <div class="google-scholar-link">
           <a href="https://scholar.google.com/citations?user=DXbfUR0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-            View my Google Scholar profile
+            Google Scholar
           </a>
         </div>
       </div>
