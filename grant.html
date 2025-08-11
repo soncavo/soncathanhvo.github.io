@@ -14,7 +14,14 @@
     main { padding: 20px; max-width: 900px; margin: auto; }
     section { margin-bottom: 30px; }
     h1, h2 { color: #004080; }
-    ul { padding-left: 20px; }
+    ul {
+      padding-left: 40px; /* increased indentation */
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+    ul ul {
+      padding-left: 40px; /* nested lists further indented */
+    }
     footer { text-align: center; padding: 10px; color: #888; font-size: 0.9em; border-top: 1px solid #ccc; margin-top: 40px; }
   </style>
 </head>
