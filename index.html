@@ -12,9 +12,18 @@
     nav {
       background-color: #004080;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    nav .site-name {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 14px 20px;
+      text-decoration: none;
+      flex-shrink: 0;
     }
     nav a {
-      float: left;
       display: block;
       color: white;
       text-align: center;
@@ -34,12 +43,12 @@
       margin: auto;
     }
     .profile-container {
-  display: flex;
-  align-items: flex-start;  /* changed from center to flex-start */
-  gap: 30px;
-  max-width: 900px;
-  margin: auto;
-}
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
     .profile-photo img {
       width: 280px;
       height: auto;
@@ -68,9 +77,9 @@
       text-decoration: underline;
     }
     .profile-description {
-  flex: 1;
-  margin-top: 30px; 
-}
+      flex: 1;
+      margin-top: 30px; 
+    }
     footer {
       text-align: center;
       padding: 10px;
@@ -83,6 +92,7 @@
 </head>
 <body>
   <nav>
+    <span class="site-name">Sonca Vo</span>
     <a href="index.html" class="active">About Me</a>
     <a href="teaching.html">Teaching</a>
     <a href="research.html">Research</a>
