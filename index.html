@@ -57,10 +57,13 @@
     }
     .profile-container {
       display: flex;
-      align-items: flex-start;
+      align-items: flex-start; /* align items at top */
       gap: 30px;
       max-width: 900px;
       margin: auto;
+    }
+    .profile-photo {
+      align-self: flex-start; /* ensure aligns at top */
     }
     .profile-photo img {
       width: 280px;
@@ -91,7 +94,8 @@
     }
     .profile-description {
       flex: 1;
-      margin-top: 30px; 
+      margin-top: 0; /* remove previous 30px margin */
+      align-self: flex-start; /* align at top */
     }
     footer {
       text-align: center;
