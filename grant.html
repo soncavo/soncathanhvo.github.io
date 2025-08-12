@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Grant - Sonca Vo</title>
   <style>
+    /* Same CSS as index.html */
     body {
       font-family: Arial, sans-serif;
       margin: 0; 
@@ -12,44 +13,22 @@
     }
     nav {
       background-color: #004080;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-      height: 60px;
-      box-sizing: border-box;
+      overflow: hidden;
     }
-    .site-info {
-      display: flex;
-      flex-direction: column;
+    nav a {
+      float: left;
+      display: block;
       color: white;
-      font-weight: bold;
-      line-height: 1.1;
-      font-size: 1.1em;
-    }
-    .site-name {
-      font-size: 1.3em;
-    }
-    .site-institution {
-      font-size: 0.9em;
-      font-weight: normal;
-      margin-top: 2px;
-      opacity: 0.85;
-    }
-    .nav-links a {
-      display: inline-block;
-      color: white;
+      text-align: center;
+      padding: 14px 20px;
       text-decoration: none;
       font-weight: bold;
-      padding: 14px 15px;
-      font-size: 1em;
     }
-    .nav-links a:hover {
+    nav a:hover {
       background-color: #0066cc;
     }
-    .nav-links a.active {
+    nav a.active {
       background-color: #00264d;
-      pointer-events: none;
     }
     main {
       padding: 20px;
@@ -63,7 +42,13 @@
     section {
       margin-bottom: 30px;
     }
-    h1, h2 {
+    h1 {
+      color: #004080;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    h2 {
       color: #004080;
     }
     ul {
@@ -86,18 +71,12 @@
 </head>
 <body>
   <nav>
-    <div class="site-info">
-      <span class="site-name">Sonca Vo</span>
-      <span class="site-institution">The University of Utah</span>
-    </div>
-    <div class="nav-links">
-      <a href="index.html">About Me</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="research.html">Research</a>
-      <a href="service.html">Service</a>
-      <a href="grant.html" class="active">Grant</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    <a href="index.html">About Me</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="research.html">Research</a>
+    <a href="service.html">Service</a>
+    <a href="grant.html" class="active">Grant</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <main>
