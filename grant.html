@@ -12,42 +12,50 @@
     }
     nav {
       background-color: #004080;
-      overflow: hidden;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 0 20px;
+      height: 60px;
+      box-sizing: border-box;
     }
-    .nav-left {
+    .site-info {
+      display: flex;
+      flex-direction: column;
       color: white;
       font-weight: bold;
+      line-height: 1.1;
       font-size: 1.1em;
     }
-    .nav-right a {
+    .site-name {
+      font-size: 1.3em;
+    }
+    .site-institution {
+      font-size: 0.9em;
+      font-weight: normal;
+      margin-top: 2px;
+      opacity: 0.85;
+    }
+    .nav-links a {
       display: inline-block;
       color: white;
-      text-align: center;
-      padding: 14px 16px;
       text-decoration: none;
       font-weight: bold;
+      padding: 14px 15px;
+      font-size: 1em;
     }
-    .nav-right a:hover {
+    .nav-links a:hover {
       background-color: #0066cc;
     }
-    .nav-right a.active {
+    .nav-links a.active {
       background-color: #00264d;
+      pointer-events: none;
     }
     main {
       padding: 20px;
       max-width: 900px;
       margin: auto;
       line-height: 1.6;
-    }
-    p, li {
-      line-height: 1.6;
-    }
-    section {
-      margin-bottom: 30px;
     }
     h1 {
       color: #004080;
@@ -57,6 +65,10 @@
     }
     h2 {
       color: #004080;
+      margin-top: 30px;
+    }
+    h3 {
+      margin-top: 15px;
     }
     ul {
       padding-left: 40px;
@@ -78,10 +90,11 @@
 </head>
 <body>
   <nav>
-    <div class="nav-left">
-      Sonca Vo – University of Utah
+    <div class="site-info">
+      <span class="site-name">Sonca Vo</span>
+      <span class="site-institution">University of Utah</span>
     </div>
-    <div class="nav-right">
+    <div class="nav-links">
       <a href="index.html">About Me</a>
       <a href="teaching.html">Teaching</a>
       <a href="research.html">Research</a>
