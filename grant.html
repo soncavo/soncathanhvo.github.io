@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Grant - Sonca Vo</title>
   <style>
-    /* Same CSS as index.html */
     body {
       font-family: Arial, sans-serif;
       margin: 0; 
@@ -14,20 +13,28 @@
     nav {
       background-color: #004080;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
     }
-    nav a {
-      float: left;
-      display: block;
+    .nav-left {
+      color: white;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .nav-right a {
+      display: inline-block;
       color: white;
       text-align: center;
-      padding: 14px 20px;
+      padding: 14px 16px;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
+    .nav-right a:hover {
       background-color: #0066cc;
     }
-    nav a.active {
+    .nav-right a.active {
       background-color: #00264d;
     }
     main {
@@ -71,12 +78,17 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">About Me</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="research.html">Research</a>
-    <a href="service.html">Service</a>
-    <a href="grant.html" class="active">Grant</a>
-    <a href="contact.html">Contact</a>
+    <div class="nav-left">
+      Sonca Vo – University of Utah
+    </div>
+    <div class="nav-right">
+      <a href="index.html">About Me</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="research.html">Research</a>
+      <a href="service.html">Service</a>
+      <a href="grant.html" class="active">Grant</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
   <main>
